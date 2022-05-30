@@ -1,9 +1,10 @@
-function truckSimChatMessageHandler(sender_id, sender_name, message)
-  if message == "darn" then
-    return 1
-  else
-    return 0
-  end
+function truckSimCheckSpawnedVehicle(PlayerID, vehicleID, data)
+  print(vehicleID)
+  SendChatMessage(-1, "Spawned Vehicle ID: " + vehicleID)
 end
+money = 10000;
 
-MP.RegisterEvent("onChatMessage", "truckSimChatMessageHandler")
+
+
+MP.RegisterEvent("onVehicleSpawn", "truckSimCheckSpawnedVehicle")
+print(money)
